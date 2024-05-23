@@ -55,7 +55,6 @@ export async function getCars({
   model,
   year,
 }: Filters): Promise<Car[]> {
-  console.log(priceRange, model, year);
   const cars = await prisma.car.findMany({
     where: {
       AND: [
